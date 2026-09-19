@@ -104,7 +104,7 @@ pip install -r requirements.txt
 - **Ordinal modelling**: Frank-Hall binary decomposition across 4 stage thresholds
 - **Purity correction**: Granulocyte marker correlation analysis + hypergeometric enrichment test
 
-## Future plans
+## Trajectory
 
 **Purity correction (rigorous)**
 - Implement covariate adjustment: regress granulocyte contamination scores out of all 13,237 genes simultaneously, rather than removing the worst offenders. This is the standard method and a strictly stronger test than the current gene-exclusion approach.
