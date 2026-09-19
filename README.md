@@ -104,6 +104,28 @@ pip install -r requirements.txt
 - **Ordinal modelling**: Frank-Hall binary decomposition across 4 stage thresholds
 - **Purity correction**: Granulocyte marker correlation analysis + hypergeometric enrichment test
 
+## Future plans
+
+**Purity correction (rigorous)**
+- Implement covariate adjustment: regress granulocyte contamination scores out of all 13,237 genes simultaneously, rather than removing the worst offenders. This is the standard method and a strictly stronger test than the current gene-exclusion approach.
+
+**Staging model improvements**
+- Improve SMM detection — currently the hardest stage to classify (sits on a continuum with no discrete expression boundary). Possible approaches: continuous progression score thresholding, survival-informed labelling if outcome data is available.
+- Characterise the 2 pathways that became newly significant after purity correction.
+
+**Validation**
+- Reproduce key findings on an independent MM dataset (e.g. GSE2658 or CoMMpass) to test whether the progression score and pathway signatures generalise beyond GSE6477.
+
+**Biological follow-up**
+- Deep-dive into the Protein Secretion pathway strengthening after purity correction — this is a core plasma cell function and may represent a genuine early cancer signal worth investigating.
+- Network analysis of the leading-edge genes from the top GSEA pathways to identify hub genes driving progression.
+
+**Technical**
+- Covariate-adjusted GSEA for all 4 stage comparisons, not just Normal PC → MGUS.
+- Extend the ordinal progression score to a continuous risk score with confidence intervals per sample.
+
+---
+
 ## License
 
 This project uses the publicly available GSE6477 dataset. Code is released under the MIT License.
