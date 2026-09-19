@@ -1,0 +1,5 @@
+model,features,accuracy,balanced_acc,roc_auc,normal_found
+LogReg (L2),all genes,0.993421052631579,0.9642857142857143,1.0,13/14
+LogReg (L2),purity-filtered,1.0,1.0,1.0,14/14
+RandomForest,all genes,0.993421052631579,0.9642857142857143,1.0,13/14
+RandomForest,purity-filtered,0.993421052631579,0.9642857142857143,1.0,13/14
